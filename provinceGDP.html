@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script type="application/javascript" src="jquery-2.0.2.min.js"></script>
+        <script type="application/javascript" src="highcharts.js"></script>
+        <script type="application/javascript" src="exporting.js"></script>
+        <script type="application/javascript" src="GDPdata.js"></script>
+
+    </head>
+    <body>
+        <select id="selectProvince">
+            <option value="bj">北  京</option>
+            <option value="tj">天  津</option>
+            <option value="hebei">河  北</option>
+            <option value="sx1">山  西</option>
+            <option value="nmg">内蒙古</option>
+            <option value="ln">辽  宁</option>
+            <option value="gl">吉  林</option>
+            <option value="hlj">黑龙江</option>
+            <option value="sh">上  海</option>
+            <option value="js">江  苏</option>
+            <option value="zj">浙  江</option>
+            <option value="ah">安  徽</option>
+            <option value="fj">福  建</option>
+            <option value="jx">江  西</option>
+            <option value="sd">山  东</option>
+            <option value="henan">河  南</option>
+            <option value="hubei">湖  北</option>
+            <option value="hunan">湖  南</option>
+            <option value="gd">广  东</option>
+            <option value="gx">广  西</option>
+            <option value="hainan">海  南</option>
+            <option value="cq">重  庆</option>
+            <option value="sc">四  川</option>
+            <option value="gz">贵  州</option>
+            <option value="yn">云  南</option>
+            <option value="xz">西  藏</option>
+            <option value="sx3">陕  西</option>
+            <option value="gs">甘  肃</option>
+            <option value="qh">青  海</option>
+            <option value="nx">宁  夏</option>
+            <option value="xj">新  疆</option>
+        </select>
+        <div id="container"></div>
+        <div id="container1"></div>
+        <script type="application/javascript" src="drawLineGraph.js"></script>
+        <script type="application/javascript" src="globalVar.js"></script>
+        <script>
+            var IndexViewProvince = provincesMap[ViewProvince];
+            $("#selectProvince")[0].selectedIndex = IndexViewProvince - 1;
+            drawLineGraph();
+            $("#selectProvince").change(
+                    function(){
+                        drawLineGraph();
+                        ViewProvince = $("#selectProvince").val();
+            });
+        </script>
+    </body>
+</html>

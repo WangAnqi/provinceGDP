@@ -6,7 +6,12 @@
         <script type="application/javascript" src="highcharts.js"></script>
         <script type="application/javascript" src="exporting.js"></script>
         <script type="application/javascript" src="GDPdata.js"></script>
-
+        <script>
+            var url = location.search;
+            var str = url.substr(1);
+            strs = str.split("?");
+            var ViewProvince = strs[0];
+        </script>
     </head>
     <body>
         <select id="selectProvince">
@@ -45,7 +50,6 @@
         <div id="container"></div>
         <div id="container1"></div>
         <script type="application/javascript" src="drawLineGraph.js"></script>
-        <script type="application/javascript" src="globalVar.js"></script>
         <script>
             var IndexViewProvince = provincesMap[ViewProvince];
             $("#selectProvince")[0].selectedIndex = IndexViewProvince - 1;

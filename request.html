@@ -3,16 +3,15 @@
 <script type="application/javascript" src="jquery-2.0.2.min.js"></script>
 </head>
 <body>
-<div id="bj" class="" onclick="getBj()">Beijing</div>
-<div id="tj" onclick="getTj()">tianjin</div>
+<div id="bj" class="province">Beijing</div>
+<div id="tj" class="province">tianjin</div>
 </body>
 <script>
     request = "./provinceGDP.html?";
-    function getBj(){
-        window.open("./provinceGDP.html?bj")
-    }
-    function getTj(){
-        window.open("./provinceGDP.html?tj")
-    }
+
+    $(".province").click(function(){
+        var urltmp = request + $(this).attr("id");
+        window.open(urltmp);
+    });
 </script>
 </html>

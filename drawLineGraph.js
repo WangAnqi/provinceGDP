@@ -28,7 +28,7 @@ drawdata = {
         },
         labels: {
             formatter: function() {
-                return this.value +'짙짚'
+                return this.value +'￥'
             }
         }
     },

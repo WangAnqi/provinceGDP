@@ -17,7 +17,7 @@ drawdata = {
         text: ''
     },
     subtitle: {
-        text: 'Source: ¹ú¼ÒÍ³¼Æ¾Ö'
+        text: 'Source: ä¸­å›½å›½å®¶ç»Ÿè®¡å±€'
     },
     xAxis: {
         categories: []
@@ -28,7 +28,7 @@ drawdata = {
         },
         labels: {
             formatter: function() {
-                return this.value +'£¤'
+                return this.value +'ì§™ì§š'
             }
         }
     },
@@ -59,17 +59,17 @@ drawdata1 = {
         type: 'spline'
     },
     title: {
-        text: '1978-2013Äê '
+        text: '1978-2013å¹´ '
     },
     subtitle: {
-        text: 'Source: ¹ú¼ÒÍ³¼Æ¾Ö'
+        text: 'Source: ä¸­å›½å›½å®¶ç»Ÿè®¡å±€'
     },
     xAxis: {
         categories: []
     },
     yAxis: {
         title: {
-            text: 'GDPÔö³¤ÂÊ'
+            text: 'äººå‡GDPå¢é•¿ç‡'
         },
         labels: {
             formatter: function() {
@@ -107,7 +107,7 @@ function drawLineGraph()
     drawdata.xAxis.categories = perCapitaGDP.list[0].value;
     drawdata.series[0].name = perCapitaGDP.list[IndexOfSelectedProvince].name;
     drawdata.series[0].data = perCapitaGDP.list[IndexOfSelectedProvince].value;
-    drawdata.title.text =  '1978-2013Äê ' + perCapitaGDP.list[IndexOfSelectedProvince].name + ' ÈË¾ùGDP';
+    drawdata.title.text =  '1978-2013å¹´ ' + perCapitaGDP.list[IndexOfSelectedProvince].name + ' äººå‡GDP';
 
     $(function () {
         $('#container').highcharts(drawdata);
@@ -116,7 +116,7 @@ function drawLineGraph()
     drawdata1.xAxis.categories = perGDPIncreaseRate.list[0].value;
     drawdata1.series[0].name = perGDPIncreaseRate.list[IndexOfSelectedProvince].name;
     drawdata1.series[0].data = perGDPIncreaseRate.list[IndexOfSelectedProvince].value;
-    drawdata1.title.text =  '1978-2013Äê ' + perGDPIncreaseRate.list[IndexOfSelectedProvince].name + ' ÈË¾ùGDPÔö³¤ÂÊ';
+    drawdata1.title.text =  '1978-2013å¹´ ' + perGDPIncreaseRate.list[IndexOfSelectedProvince].name + ' äººå‡GDPå¢é•¿ç‡';
 
     $(function () {
         $('#container1').highcharts(drawdata1);
